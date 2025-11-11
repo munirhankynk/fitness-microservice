@@ -1,6 +1,8 @@
 server:
-  port:8081
+  port: 8081
 spring:
+  application:
+    name: user-service
   datasource:
     url: jdbc:postgresql://127.0.0.1:5432/fitness_user_db
     username: postgres
@@ -17,3 +19,8 @@ spring:
             non_contextual_creation: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
     open-in-view: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
